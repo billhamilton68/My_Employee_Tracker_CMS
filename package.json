@@ -1,0 +1,14 @@
+{
+  "name": "my_employee_tracker_cms",
+  "version": "1.0.0",
+  "description": "employee tracker cms",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Bill Hamilton",
+  "license": "ISC",
+  "dependencies": {
+    "inquirer": "^8.2.4"
+  }
+}
