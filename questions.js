@@ -3,6 +3,13 @@ const departmentQuestions = [
     type: "input",
     name: "department",
     message: "What is the name of the department?",
+    validate: function (value) {
+      if (value.length) {
+        return true;
+      } else {
+        return "Please enter a valid department name.";
+      }
+    },
   },
 ];
 
