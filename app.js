@@ -21,33 +21,42 @@ db.query = util.promisify(db.query);
 staffFunctions.setDb(db);
 
 function promptUser() {
-  inquirer.prompt(questions.mainQuestion).then((answers) => {
+// prompt the user with a set of main questions
+inquirer.prompt(questions.mainQuestion).then(async (answers) => {
+     //user's answer, call the appropriate staff function
     switch (answers.action) {
-      case 'View All Departments':
-        staffFunctions.viewAllDepartments(promptUser);
-        break;
-      case 'View All Roles':
-        staffFunctions.viewAllRoles(promptUser);
-        break;
-      case 'View All Employees':
-        staffFunctions.viewAllEmployees(promptUser);
-        break;
-      case 'Add Department':
-        staffFunctions.addDepartment(promptUser);
-        break;
-      case 'Add Role':
-        staffFunctions.addRole(promptUser);
-        break;
-      case 'Add Employee':
-        staffFunctions.addEmployee(promptUser);
-        break;
-      case 'Update Employee Role':
-        staffFunctions.updateEmployeeRole(promptUser);
-        break;
-      default:
-        console.log('Invalid operation');
+        case 'View All Departments':
+            
+            await staffFunctions.viewAllDepartments();
+            break;
+          case 'View All Roles':
+            await staffFunctions.viewAllRoles();
+            break;
+          case 'View All Employees':
+            await staffFunctions.viewAllEmployees();
+            break;
+          case 'Add Department':
+            await staffFunctions.addDepartment();
+            break;
+          case 'Add Role':
+            await staffFunctions.addRole();
+            break;
+          case 'Add Employee':
+            await staffFunctions.addEmployee();
+            break;
+          case 'Update Employee Role':
+            await staffFunctions.updateEmployeeRole();
+            break;
+          case 'Exit':
+            db.end();
+            console.log('Exiting...');
+            process.exit();
+            break;
+          default:
+            console.log('Invalid operation');
+        }
+        promptUser();  // Call promptUser again after the previous operation finishes
+      });
     }
-  });
-}
-
-promptUser();
+    
+    promptUser();

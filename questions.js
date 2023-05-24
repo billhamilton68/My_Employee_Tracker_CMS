@@ -1,3 +1,4 @@
+// users are prompted with questions to add departments, roles, employees, and update employee roles
 const departmentQuestions = [
   {
     type: "input",
