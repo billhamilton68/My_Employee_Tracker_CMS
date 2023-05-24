@@ -3,7 +3,12 @@
 * This is a Node.js application designed to assist with the management of an organization's staff. It provides a user-friendly command-line interface for viewing, adding, and updating employees, roles, and departments.
 
 
-
+## Installation
+1. Clone app from GitHub using url: https://github.com/billhamilton68/My_Employee_Tracker_CMS.git
+2. run npm install to install dependancies
+3. log into MySql from integrated terminal or GitBash
+4. run schema.sql query
+5. run seeds.sql query  
 
 ## Usage
 1. Run node app.js to start the application.
@@ -19,3 +24,5 @@
 * Add role: Allows the user to add a new role/job title to the organization.
 * Add employee: Allows the user to add a new employee to the organization.
 * Update employee role: Allows the user to update an employee's role/job title.
+
+## url to demo video
