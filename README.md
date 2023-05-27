@@ -26,4 +26,4 @@
 * Update employee role: Allows the user to update an employee's role/job title.
 
 ## url to demo video
-https://drive.google.com/file/d/1mq_7fKhJGScVI7iLiNh5EfwdPVrtvtP2/view?usp=drive_link
+https://drive.google.com/file/d/1mq_7fKhJGScVI7iLiNh5EfwdPVrtvtP2/view?usp=sharing
